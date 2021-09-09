@@ -14,12 +14,12 @@ public static void main(String[] args) throws Exception {
     }
 
     // code
-    int count1 = 1;//to count the value of present or current ele as well
-    int count2 = 0;//directly starting the count for eles right side of curr, as curr value already taken in count1
     int max = 0;
     int area;
     int i;
     for (i = 0; i < a.length; i++) {
+        int count1 = 1;//to count the value of present or current ele as well
+    int count2 = 0;//directly starting the count for eles right side of curr, as curr value already taken in count1
         for (int left = i-1; left >= 0; left--) {
             if (a[left] > a[i]) {
                 count1 += 1;
