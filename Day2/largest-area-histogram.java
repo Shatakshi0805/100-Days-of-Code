@@ -21,7 +21,7 @@ public static void main(String[] args) throws Exception {
         int count1 = 1;//to count the value of present or current ele as well
     int count2 = 0;//directly starting the count for eles right side of curr, as curr value already taken in count1
         for (int left = i-1; left >= 0; left--) {
-            if (a[left] > a[i]) {
+            if (a[left] >= a[i]) {
                 count1 += 1;
             } else {//first small ele found, move out of that loop
                 break;
@@ -29,7 +29,7 @@ public static void main(String[] args) throws Exception {
         }
         
         for (int right = i+1; right <= a.length-1; right++) {//for elements on the right side of current ele
-            if (a[right] > a[i]) {
+            if (a[right] >= a[i]) {
                 count2 += 1;
             } else {//first small ele found, move out of that loop
                 break;
